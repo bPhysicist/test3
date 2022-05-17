@@ -19,3 +19,4 @@ jobs:
       - shell: bash
         run: |
           echo "2"
+    needs: test 
