@@ -1,0 +1,21 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          echo "1"
+  deployment:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - shell: bash
+        run: |
+          echo "2"
